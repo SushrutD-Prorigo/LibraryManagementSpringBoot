@@ -30,4 +30,8 @@ public class StudentService {
 		repository.deleteById(id);
 		return "Deleted ID::"+id;
 	}
+	
+//	public List<Student> getAll(){
+//		return repository.getStudentName();
+//	}
 }
