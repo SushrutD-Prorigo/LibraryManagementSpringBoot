@@ -1,0 +1,46 @@
+@charset "ISO-8859-1";
+body{
+	background-color: #3a74d6;
+	
+}
+
+h1{
+	text-align: center;
+	border : 3px solid black;
+}
+
+h2{
+	color: voilet;
+}
+img{
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20% 20%;
+  
+}
+
+.first{
+	text-align:center;
+	color: #113e88;
+	 border: 5px solid gray;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-right: 20%;
+  margin-left: 20%;
+  padding: 20px 2px;
+  background-color:#86a1cf;
+	
+}
+
+
+.about{
+height: 170px;
+  width: 400px;
+  background-color:#86a1cf;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  margin-right: 20%;
+  margin-left: 37%;
+	
+}

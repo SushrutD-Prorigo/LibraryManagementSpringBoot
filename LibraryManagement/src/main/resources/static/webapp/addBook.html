@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+	
+	$(document).ready(function(){
+	$(".submit").click(function(){
+		var state=confirm("Submit data..?");
+		if(state==true)
+			$(location).prop('href', 'adminLogin.html');
+				})
+	});
+	</script>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+ <table>
+ 	<form>
+	 	<table>
+	 		<tr>	
+	 			<td>
+	 			<label>Book Name:</label>
+	 			</td>
+	 			<td>
+	 				<input type="text" placeholder="Book Name">
+	 			</td>
+	 		</tr>
+	 		<tr>	
+	 			<td>
+	 			<label>Author Name:</label>
+	 			</td>
+	 			<td>
+	 				<input type="text" placeholder="Author">
+	 			</td>
+	 		</tr>
+	 		<tr>	
+	 			<td>
+	 			<label>Price:</label>
+	 			</td>
+	 			<td>
+	 				<input type="text" placeholder="Price">
+	 			</td>
+	 		</tr>
+	 		<tr>	
+	 			<td>
+	 			<label>Copies:</label>
+	 			</td>
+	 			<td>
+	 				<input type="text" placeholder="Copies">
+	 			</td>
+	 			<tr>
+	 			<td><input class="submit" type="button" value="Submit"></td>
+	 		</tr>
+	 		</tr>
+	 		
+	 	</table>
+ 	</form>
+ </table>
+</body>
+</html>

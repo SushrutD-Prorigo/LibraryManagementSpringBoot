@@ -1,0 +1,74 @@
+@charset "ISO-8859-1";
+body{
+	
+	background-color:#3a74d6;
+}
+
+
+
+.first{
+	list-style-type: circle;
+	
+	
+}
+
+.welcome{
+	text-align: centre;
+	margin-left: 40%;
+	color: Green;
+
+}
+
+
+button{
+  background-color: #46679d;
+  border:none;
+  color: white;
+  padding: 16px 64px;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  margin-right: 10%;
+  margin-left: 0%;
+  
+  cursor: pointer;
+}
+
+.p{
+	background-color: #4f77ba;
+  border: none;
+  color: white;
+  padding: 32px 32px;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-right: 10%;
+  margin-left: 210px;
+	
+}
+
+.header{
+ background-color:#5483d2;
+  padding: 2px 2px;
+  text-align: centre;
+}
+
+.welcome{
+	color:#15366d;
+}
+
+.navigation{
+  background-color:#abc3ec;
+  color: black;
+  text-align: right;
+}
+
+.sideNav{
+  height: 100%;
+  width: 210px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #08347d;
+  overflow-x: hidden;
+  padding-top: 20px;
+}

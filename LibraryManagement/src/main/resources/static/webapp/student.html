@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>>
+	<script>
+		$(document).ready(function()
+				{
+			$(".login_button").click(function(){
+				var id=document.getElementById("id").value;
+				alert(id);
+				$(location).prop('href', 'studentLogin.html')
+				
+			});
+				});
+
+	</script>
+<link rel="stylesheet" href="student.css">
+<title>Library Managemnet Student</title>
+</head>
+<body>
+	<a href="home.html"><h3>Home</h3></a>
+	<form>
+	<div class="first">
+		<label for="AdminID">StudentID : </label>
+		<input  id="id" type="text" name="id" placeholder="Enter Id">
+		<br><br>
+		<label for="psw">Password : </label>
+		<input type="password" name="pass" placeholder="Enter Password">
+		<br><br>
+		</div>
+		
+		<input  class="login_button" type="button" value="Login">
+		
+	</form>
+	<br>
+	
+</body>
+</html>

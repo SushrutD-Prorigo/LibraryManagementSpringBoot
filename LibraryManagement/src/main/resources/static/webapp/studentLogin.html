@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+	
+	
+	$(document).ready(function(){
+	$(".view_allBooks").click(function(){
+		$("p").html("List of Books");//write code for view list of books.
+	})
+	});
+	
+	$(document).ready(function(){
+	$(".search_Books").click(function(){
+		$("p").html("Book >>");//write code for Searching book here.
+		
+	})
+	}); 
+	
+	$(document).ready(function(){
+	$(".order_Books").click(function(){
+		$("p").html("Book Ordered Successfully");//write code for Ordering book here.
+		
+	})
+	});
+	
+	$(document).ready(function(){
+	$(".return_Books").click(function(){
+		$("p").html("Book returned");//write code for returning book here.
+	})
+	});
+	
+	$(document).ready(function(){
+	$(".issue_Books").click(function(){
+		$("p").html("Issue books");//write code for issue book here.
+	})
+	});
+	$(document).ready(function(){
+		$(".exit").click(function(){
+			var state=confirm("Do you want to logout..?");
+			if(state==true)
+				$(location).prop('href', 'home.html');
+			
+		})
+		
+	})
+</script>
+<link rel="stylesheet" href="studentLogin.css">
+<title>Welcome Student</title>
+</head>
+<body>
+<div class="header">
+    <h1 class="welcome">Welcome</h1>
+  </div>
+  <div class="navigation">
+	<button class="exit">Logout</button>
+	</div>
+	<div class="sideNav">
+		<ul class="first">
+			<li><button class="view_allBooks">View AllBooks</button></li>
+			<li><button class="search_Books">Search Books</button></li>
+			<li><button class="order_Books">Order Books</button></li>
+			<li><button class="return_Books">Return Books</button> </li>
+			<li><button class="issue_Books">Issue Books</button></li>		
+		</ul>
+		</div>
+	
+	<div class="p">
+		<p></p>
+	</div>
+</body>
+</html>

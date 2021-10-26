@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+	
+	$(document).ready(function(){
+	$(".add_books").click(function(){
+		$(location).prop('href', 'addBook.html');
+		
+	})
+	});
+	
+	$(document).ready(function(){
+	$(".update_books").click(function(){
+		
+		$("p").html("Book Updated Successfully");//write code for adding book here.
+	})
+	});
+	
+	$(document).ready(function(){
+	$(".delete_books").click(function(){
+			  var bookName = prompt("Enter book name");
+			  if (bookName != null) {
+				  var state=confirm("Do you want to delete "+bookName+"?");
+				  if(state==true)
+				  	$("p").html("Book Deleted Successfully");
+			  }
+			
+		//write code for adding book here.
+	})
+	});
+	
+	$(document).ready(function(){
+	$(".search_books").click(function(){
+		 var bookName = prompt("Enter book name");
+		if(bookName !=null){
+			alert("Book Found");
+		}
+		else
+			alert("Invalid");
+		
+	})
+	});
+	
+	$(document).ready(function(){
+	$(".view_order").click(function(){
+		$("p").html("Orders");//write code for adding book here.
+	})
+	});
+	
+	$(document).ready(function(){
+		$(".exit").click(function(){
+			var state=confirm("Do you want to logout..?");
+			if(state==true)
+				$(location).prop('href', 'home.html');
+			
+		})
+		
+	})
+</script>
+<link rel="stylesheet" href="adminLogin.css">
+<title>Admin Login</title>
+</head>
+<body>
+<div class="header">
+    <h1 class="welcome">Welcome</h1>
+  </div>
+  <div class="navigation">
+	<button class="exit">Logout</h1>
+	</div>
+	<div class="sideNav">
+	<ul class="first">
+		<li ><button class="add_books">Add Books</button></li>
+		<li><button class="update_books">Update Books</button></li>
+		<li><button class="delete_books">Delete Books</button></li>
+		<li><button class="search_books">Search Books</button></li>
+		<li><button class="view_order">View Orders</button></li>
+		</ul>
+	</div>
+	<div class="p">
+		<p></p>
+	</div>
+</body>
+</html>
+
