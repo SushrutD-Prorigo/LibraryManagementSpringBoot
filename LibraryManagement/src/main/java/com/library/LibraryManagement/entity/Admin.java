@@ -13,6 +13,11 @@ public class Admin {
 	@GeneratedValue
 	private int adminId;
 	private String adminName;
+	
+	
+	public Admin() {
+		super();
+	}
 	public int getAdminId() {
 		return adminId;
 	}

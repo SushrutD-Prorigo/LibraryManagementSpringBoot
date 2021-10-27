@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div align="right">
+<a href="index.html"><h3>Home</h3></a>
+</div>
+<form action="#" th:action="@{/admin_login_success}"  method="post">
+	<div class="second">
+		<label for="AdminID">AdminID : </label>
+		<input type="text" id="id" name="id" placeholder="Enter ID">
+		<br><br>
+		<label for="psw">Password : </label>
+		<input type="password" name="pass" placeholder="Enter Password">
+		<br><br>
+	</div>
+		<button  type="submit" >Login</button>
+	
+	</form>
+	<br>
+<script>
+	
+
+</script>
+		
+</body>
+</html>

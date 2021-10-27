@@ -6,9 +6,30 @@
 	
 	$(document).ready(function(){
 	$(".submit").click(function(){
-		var state=confirm("Submit data..?");
-		if(state==true)
+		var book_name=document.getElementById("book_name").value;
+		var book_author=document.getElementById("book_author").value;
+		var price=document.getElementById("price").value;
+		var copies=document.getElementById("copies").value;
+		var state=confirm("Submit data..?"+"\nBook Name :"+book_name+"\nAuthor :"+book_author+"\nPrice :"+price+"\nCopies"+copies);
+		var data={
+				  "bookTitle":book_name,
+				    "bookAuthor":book_author,
+				    "bookPrice":price,
+				    "bookCount":copies
+		}
+		const jsonObj= JSON.stringify(data);
+		$.ajax({
+			url:'http://localhost:8080/addBook?jsonObj',
+			success: function(){
+
+			},
+			error:function(err){},
+		})
+		
+		if(state==true){
+			
 			$(location).prop('href', 'adminLogin.html');
+			}
 				})
 	});
 	</script>
@@ -24,7 +45,7 @@
 	 			<label>Book Name:</label>
 	 			</td>
 	 			<td>
-	 				<input type="text" placeholder="Book Name">
+	 				<input  id="book_name" type="text" placeholder="Book Name">
 	 			</td>
 	 		</tr>
 	 		<tr>	
@@ -32,7 +53,7 @@
 	 			<label>Author Name:</label>
 	 			</td>
 	 			<td>
-	 				<input type="text" placeholder="Author">
+	 				<input id="book_author" type="text" placeholder="Author">
 	 			</td>
 	 		</tr>
 	 		<tr>	
@@ -40,7 +61,7 @@
 	 			<label>Price:</label>
 	 			</td>
 	 			<td>
-	 				<input type="text" placeholder="Price">
+	 				<input id="price" type="text" placeholder="Price">
 	 			</td>
 	 		</tr>
 	 		<tr>	
@@ -48,7 +69,7 @@
 	 			<label>Copies:</label>
 	 			</td>
 	 			<td>
-	 				<input type="text" placeholder="Copies">
+	 				<input id="copies" type="text" placeholder="Copies">
 	 			</td>
 	 			<tr>
 	 			<td><input class="submit" type="button" value="Submit"></td>

@@ -16,9 +16,12 @@ public class AdminService {
 	
 	public Admin addAdmin(Admin admin) {
 		return repository.save(admin);
+		
 	}
 	
 	public List<Admin> getAdmin(){
 		return repository.findAll();
 	}
+	
+	
 }

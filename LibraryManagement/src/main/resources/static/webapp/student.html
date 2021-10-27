@@ -8,7 +8,8 @@
 				{
 			$(".login_button").click(function(){
 				var id=document.getElementById("id").value;
-				alert(id);
+				var psw=document.getElementById("psw").value;
+				alert(id+" "+psw);
 				$(location).prop('href', 'studentLogin.html')
 				
 			});
@@ -26,7 +27,7 @@
 		<input  id="id" type="text" name="id" placeholder="Enter Id">
 		<br><br>
 		<label for="psw">Password : </label>
-		<input type="password" name="pass" placeholder="Enter Password">
+		<input id="psw" type="password" name="pass" placeholder="Enter Password">
 		<br><br>
 		</div>
 		

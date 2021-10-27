@@ -1,5 +1,6 @@
 package com.library.LibraryManagement.service;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +32,9 @@ public class StudentService {
 		return "Deleted ID::"+id;
 	}
 	
-//	public List<Student> getAll(){
-//		return repository.getStudentName();
-//	}
+	public List<Student> getAll(){
+		return repository.getStudentsByQuery();
+	}
+	
+	
 }

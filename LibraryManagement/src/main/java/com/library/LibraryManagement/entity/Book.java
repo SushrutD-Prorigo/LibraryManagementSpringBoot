@@ -45,6 +45,11 @@ public class Book {
 	public void setBookCount(double bookCount) {
 		this.bookCount = bookCount;
 	}
+	@Override
+	public String toString() {
+		return "Book [ bookTitle=" + bookTitle + ", bookAuthor=" + bookAuthor + ", bookPrice="
+				+ bookPrice + ", bookCount=" + bookCount + "]";
+	}
 	
 	
 
