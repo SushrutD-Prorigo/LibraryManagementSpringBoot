@@ -30,6 +30,10 @@ public class Admin {
 	public void setAdminName(String adminName) {
 		this.adminName = adminName;
 	}
+	@Override
+	public String toString() {
+		return "Admin [adminId=" + adminId + ", adminName=" + adminName + "]";
+	}
 	
 	
 

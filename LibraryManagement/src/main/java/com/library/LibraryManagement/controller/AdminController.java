@@ -28,9 +28,13 @@ public class AdminController {
 		return "admin_login";
 	}
 	
-
 	@PostMapping("/admin_login_success")
 	public String showMenu() {
+		return "admin_operation";
+	}
+	
+	@GetMapping("/admin_login_success")
+	public String showMenuRedirect() {
 		return "admin_operation";
 	}
 	

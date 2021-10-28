@@ -14,6 +14,11 @@ public class Student {
 	private String studentFname;
 	private String studentLname;
 	private String studentClass;
+	
+	
+	public Student() {
+		super();
+	}
 	public int getStudentId() {
 		return studentId;
 	}
@@ -38,5 +43,12 @@ public class Student {
 	public void setStudentClass(String studentClass) {
 		this.studentClass = studentClass;
 	}
+	@Override
+	public String toString() {
+		return "Student[ studentFname=" + studentFname + ", studentLname=" + studentLname
+				+ ", studentClass=" + studentClass + "]";
+	}
+	
+	
 
 }

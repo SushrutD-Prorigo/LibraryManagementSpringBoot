@@ -45,6 +45,13 @@ public class Records {
 	public void setIssueDate(Date issueDate) {
 		this.issueDate = issueDate;
 	}
+	@Override
+	public String toString() {
+		return "Records [studentId=" + studentId + ", bookId=" + bookId + ", issueDate=" + issueDate + "]";
+	}
+	public Records() {
+		super();
+	}
 	
 	
 }

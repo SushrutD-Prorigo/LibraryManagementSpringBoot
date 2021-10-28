@@ -2,25 +2,34 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
-<link rel="stylesheet" href="admin_login.css">
+<link rel="stylesheet" href="student_login.css">
 <title>Insert title here</title>
 </head>
 <body>
 <div align="right">
 <a href="index.html"><h3>Home</h3></a>
 </div>
-<form action="#" th:action="@{/admin_login_success}"  method="post">
+<div align="center">
+<form action="#" th:action="@{/student_login_success}"  method="post">
 	<div class="second">
-		<label for="AdminID">AdminID : </label>
-		<input type="text" id="id" name="id" placeholder="Enter ID">
+		<label for="StudentID">Student ID : </label>
+		<input type="text" id="id" name="studentid" placeholder="Enter ID">
 		<br><br>
 		<label for="psw">Password : </label>
 		<input type="password" name="pass" placeholder="Enter Password">
 		<br><br>
 	</div>
+	<div align="center">
 		<button  type="submit" >Login</button>
 	
 	</form>
-	<br>		
+	<br>
+	
+	</div>
+<script>
+	
+
+</script>
+		
 </body>
 </html>

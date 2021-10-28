@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <head>
 <meta charset="ISO-8859-1">
+
 <title>Insert title here</title>
 </head>
 <body>
 <div align="center">
-	<h1>Book added Successfully</h1>
-	<span>Book Title:</span><span th:text="${book.bookTitle}"></span>
-	<br>
-	<span>Book Author:</span><span th:text="${book.bookAuthor}"></span>
-	<br>
-	<span>Book Price:</span><span th:text="${book.bookPrice}"></span>
-	<br>
-	<span>Book Count:</span><span th:text="${book.bookCount}"></span>
-	<br>
-	<a href="/">Back</a>
+	
+	<script type="text/javascript" th:inline="javascript">
+	var title = /*[[${book.bookTitle}]]*/ 'title';
+	var author = /*[[${book.bookAuthor}]]*/ 'author';
+	var price = /*[[${book.bookPrice}]]*/ 'price';
+	var count = /*[[${book.bookCount}]]*/ 'count';
+	alert("Title:"+title+"\nAuthor:"+author+"\nPrice:"+price+"\nCount:"+count+"\nSave student data to System ?");
+		document.location.href = '/admin_login_success';
+	
+	
+	</script>
 </div>
 
 </body>
