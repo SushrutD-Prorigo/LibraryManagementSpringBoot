@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.library.LibraryManagement.entity.Book;
 import com.library.LibraryManagement.entity.Student;
@@ -81,12 +82,30 @@ public class StudentController {
 		return "student_id_form";
 	}
 
-	@PostMapping("delete_student")
+	@PostMapping("/delete_student")
 	public String deleteStudentById(@ModelAttribute("student") Student student) {
-		System.out.println(student);
+		System.out.println(student.getStudentId());
+		System.out.println(service.getStudentById(student.getStudentId()));
 		service.deleteStudent(student.getStudentId());
 		return "admin_operation";
 	}
 	
+	@GetMapping("/search_student_by_id")
+	public String searchStudentFromDB(Model model) {
+		Student student = new Student();
+		model.addAttribute("student", student);
+		return "student_search_form";
+	}
 	
+	@PostMapping("/search_student")
+	public ModelAndView searchStudentById(@ModelAttribute("student") Student student) {
+		System.out.println(student.getStudentId());
+		System.out.println(service.getStudentById(student.getStudentId()));
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("student_search_result");
+		mav.addObject("student", service.getStudentById(student.getStudentId()));
+		
+		return mav;
+	}
+		
 }

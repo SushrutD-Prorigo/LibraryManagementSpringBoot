@@ -23,7 +23,12 @@ public class BookService {
 	}
 	
 	public Book getBookById(int id) {
+		
 		return repository.findById(id).orElse(null);
+	}
+	
+	public Book searchBook(int id) {
+		return repository.searchById(id);
 	}
 	
 	public String deleteBook(int id) {

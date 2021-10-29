@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<head>
+<meta charset="ISO-8859-1">
+
+<title>Insert title here</title>
+</head>
+<body>
+<div align="center">
+<table  border="1">
+        <tr>
+            <td><p>Student Fname :</p></td>
+            <td><p th:text="${student.studentFname}"></p></td>
+        </tr>
+        <tr>
+             <td><p>Student Lname :</p></td>
+            <td><p th:text="${student.studentLname}"></p></td>
+        </tr>
+         <tr>
+             <td><p>Student Class :</p></td>
+            <td><p th:text="${student.studentClass}"></p></td>
+        </tr>
+    </table>
+    
+    <a href="/admin_login_success">Back</a>
+
+</div>
+<style>
+body {
+  background-color:  #3a74d6;
+}
+p{
+ 
+ color: white;
+	font-size: 20px; 
+}
+table {
+	 border: 1px solid black;
+	 border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+a{
+	color: white;
+	font-size: 30px;
+}
+
+
+
+</style>
+</body>
+</html>

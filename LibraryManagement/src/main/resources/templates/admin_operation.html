@@ -9,15 +9,51 @@
     <h1 class="welcome">Welcome</h1>
   </div>
   <div class="navigation">
-	<button class="exit">Logout</h1>
+	<form method="get" action="/">
+	<div align="right">
+    <button type="submit">Logout</button></div>
+</form>
 	</div>
 	<div class="sideNav">
 	<ul class="first">
 		<li ><a href="/add_book">Add Books</a></li>
 		<li><a href="/add_student">Add Student</a></li>
 		<li><a href="/delete_student_by_id">Delete Student</a></li>
+		<li><a href="/search_student_by_id">Search Student</a></li>
+		<li><a href="/delete_book_by_id">Delete Book</a></li>
 		
 		</ul>
 	</div>
+<style>
+	body {
+  background-color:  #3a74d6;
+}
+h1{
+ text-align:center;
+font-size: 50px;
+color: white;
+}
+button{
+	font-size: 20px;
+	text-align: right;
+}
+p{
+ 
+ color: white;
+	font-size: 20px; 
+}
+table {
+	 border: 1px solid black;
+	 border-collapse: collapse;
+}
+li{
+  font-size: 30px;
+  text-align: centre;
+}
+a{
+	color: white;
+	font-size: 30px;
+}
+</style>
 </body>
 </html>

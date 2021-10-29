@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<head>
+<meta charset="ISO-8859-1">
+
+<title>Insert title here</title>
+</head>
+<body>
+<div align="center">
+	
+	<div th:if="${not #lists.isEmpty(books)}">
+    <h2>Books List</h2>
+    <table class="table table-striped" border="1">
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+        </tr>
+        <tr th:each="book : ${books}">
+            <td th:text="${book.bookTitle}"></td>
+            <td th:text="${book.bookAuthor}"></td>
+        </tr>
+    </table>
+</div>
+		<a href="student_login_success" >Back</a>
+	
+</div>
+
+</body>
+</html>
